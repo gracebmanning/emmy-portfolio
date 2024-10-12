@@ -1,0 +1,42 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.navList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    list-style-type: none;
+}
+
+.navItem{
+    margin: 0px 20px;
+}
+
+.navItem a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    transform: scale(1.0);
+    color: var(--text);
+    transition: 0.2s ease-in;
+}
+
+.navItem a:hover{
+    color: var(--accent);
+    transform: scale(1.1);
+    transition: 0.2s ease-out;
+}
+
+.navIcon{
+    font-size: 22px;
+}

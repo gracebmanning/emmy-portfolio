@@ -1,0 +1,26 @@
+:root{
+    --background: white;
+    --text: black;
+    --accent: #9116DE;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #FDFDF8;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.container{
+    width: 100%;
+    margin: 20px;
+}
