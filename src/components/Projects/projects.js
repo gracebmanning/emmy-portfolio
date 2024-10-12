@@ -5,6 +5,13 @@ import './projects.css';
 // Big Joe's Dent Removal commercial
 // IMTS West
 
+const projects = [
+    {
+        title: "Is Mommy Okay?",
+
+    }, 
+];
+
 export default function Projects(){
     return(
         <div className='container'>
