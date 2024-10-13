@@ -12,6 +12,25 @@ import IMTSWestVideo from '../../assets/IMTS-West-2024.mp4';
 
 const projects = [
     {
+        title: "Is Mommy Okay?",
+        path: "is-mommy-okay",
+        thumbnail: thumb_IMO,
+        thumbnailAlt: `Ashley Tisdale, Halle Bailey, Tess Holliday, Elaine Welteroth, Stephanie Beatriz. Overlay of retro text that reads "Is Mommy Okay?".`,
+        date: "February 2024",
+        company: "Good Creative",
+        role: "Production Assistant",
+        roleDescription: "Reported to First A.D. and Production Coordinator to perform standard PA duties; organized craft services, assisted set decorators, distributed/collected walkies, ran errands, distributed schedules, coordinated talent, etc. Checked in frequently with production team, stayed nearby and ready to help at all times.",
+        projectDescription: "Part of a social media campaign to bring awareness to maternal / post-partum mental health challenges by utilizing notable public figures.",
+        moreInfoLink: "https://www.wearegoodcreative.com/is-mommy-okay",
+        embed:
+        <object width="100%" height="315px">
+            <param name="movie" value="https://www.youtube.com/embed/4NiYhuYjEx4?si=xF0HtBlZ7h-Jzp7w"/>
+            <param name="allowFullScreen" value="true"/>
+            <param name="allowscriptaccess" value="always"/>
+            <embed width="100%" height="100%" src="https://www.youtube.com/embed/4NiYhuYjEx4?si=xF0HtBlZ7h-Jzp7w" class="youtube-player" type="text/html" allowscriptaccess="always" allowfullscreen="true"/>
+        </object>
+    },
+    {
         title: "Big Joe's Dent Removal",
         path: "big-joes-dent-removal",
         thumbnail: thumb_bigJoe,
@@ -34,7 +53,7 @@ const projects = [
         title: "IMTS West 2024",
         path: "imts-west-2024",
         thumbnail: thumbIMTS,
-        thumbnailAlt: `blue background with text reading "IMTS+ Creators' Lounge"`,
+        thumbnailAlt: `blue background with text reading "IMTS+ Creators' Lounge".`,
         date: "September 2024",
         company: "Corporate Streams",
         role: "Camera Operator, Production Consultant",
@@ -47,7 +66,7 @@ const projects = [
         title: "Strip the Shame",
         path: "strip-the-shame",
         thumbnail: thumb_STS,
-        thumbnailAlt: "",
+        thumbnailAlt: `Three people holding fentanyl test strips with text reading "Strip the Shame".`,
         date: "July 2024",
         company: "Good Creative",
         role: "Production Assistant",
@@ -56,28 +75,9 @@ const projects = [
         moreInfoLink: "https://www.wearegoodcreative.com/strip-the-shame",
         embed: 
         <a id='embedSTS' href="https://vimeo.com/999632261" target="_blank" rel="noreferrer">
-            <img src={thumb_STS} />
+            <img src={thumb_STS} alt={`Three people holding fentanyl test strips with text reading "Strip the Shame".`} />
         </a>
     },
-    {
-        title: "Is Mommy Okay?",
-        path: "is-mommy-okay",
-        thumbnail: thumb_IMO,
-        thumbnailAlt: "",
-        date: "February 2024",
-        company: "Good Creative",
-        role: "Production Assistant",
-        roleDescription: "Reported to First A.D. and Production Coordinator to perform standard PA duties; organized craft services, assisted set decorators, distributed/collected walkies, ran errands, distributed schedules, coordinated talent, etc. Checked in frequently with production team, stayed nearby and ready to help at all times.",
-        projectDescription: "Part of a social media campaign to bring awareness to maternal / post-partum mental health challenges by utilizing notable public figures.",
-        moreInfoLink: "https://www.wearegoodcreative.com/is-mommy-okay",
-        embed:
-        <object width="100%" height="315px">
-            <param name="movie" value="https://www.youtube.com/embed/4NiYhuYjEx4?si=xF0HtBlZ7h-Jzp7w"/>
-            <param name="allowFullScreen" value="true"/>
-            <param name="allowscriptaccess" value="always"/>
-            <embed width="100%" height="100%" src="https://www.youtube.com/embed/4NiYhuYjEx4?si=xF0HtBlZ7h-Jzp7w" class="youtube-player" type="text/html" allowscriptaccess="always" allowfullscreen="true"/>
-        </object>
-        },
 ];
 
 export const projectRoutes = projects.map((project) => <Route path={`/projects/${project.path}`} element={ProjectPage(project)} key={project.path} />);
