@@ -47,7 +47,7 @@ const projects = [
         roleDescription: "Reported to First A.D. and Production Coordinator to perform standard PA duties; organized craft services, assisted set decorators, distributed/collected walkies, ran errands, distributed schedules, coordinated talent, etc. Checked in frequently with production team, stayed nearby and ready to help at all times.",
         projectDescription: "Part of a campaign to promote safe drug usage and make people aware of fentanyl test strips being provided for them.",
         moreInfoLink: "https://www.wearegoodcreative.com/strip-the-shame",
-        embed: <iframe id="embed-STS" src="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Strip the Shame"></iframe>
+        embed: <iframe id="embed-STS" width="560" height="315" src="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Strip the Shame"></iframe>
             
     },
     {
@@ -61,7 +61,7 @@ const projects = [
         roleDescription: "Reported to First A.D. and Production Coordinator to perform standard PA duties; organized craft services, assisted set decorators, distributed/collected walkies, ran errands, distributed schedules, coordinated talent, etc. Checked in frequently with production team, stayed nearby and ready to help at all times.",
         projectDescription: "Part of a social media campaign to bring awareness to maternal / post-partum mental health challenges by utilizing notable public figures.",
         moreInfoLink: "https://www.wearegoodcreative.com/is-mommy-okay",
-        embed: ``
+        embed:<iframe width="560" height="315" src="https://www.youtube.com/embed/4NiYhuYjEx4?si=EYPzo4xTYF3r8l2B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     },
 ];
 
