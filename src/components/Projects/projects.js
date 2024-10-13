@@ -1,6 +1,7 @@
 import './projects.css';
 import { Route } from 'react-router-dom';
 import { thumb_bigJoe, thumbIMTS, thumb_STS, thumb_IMO } from '../../assets/thumbnails';
+import IMTSWestVideo from '../../assets/IMTS-West-2024.mp4';
 
 // Is Mommy Okay?
 // Strip the Stigma
@@ -24,8 +25,8 @@ const projects = [
         embed: ``
     },
     {
-        title: "IMTS West",
-        path: "imts-west",
+        title: "IMTS West 2024",
+        path: "imts-west-2024",
         thumbnail: thumbIMTS,
         thumbnailAlt: `blue background with text reading "IMTS+ Creators' Lounge"`,
         date: "September 2024",
@@ -33,8 +34,8 @@ const projects = [
         role: "Camera Operator, Production Consultant",
         roleDescription: "Operated multiple Sony FR7 PTZ cameras with precise control. Efficiently followed shot requests of Technical Director under pressure of live-streamed events. Gave creative and technical input on productions, assisted in set up and striking of all equipment including cameras, audio equipment, monitors; practiced good cable management",
         projectDescription: "Part of a live to tape series of interviews and segments at IMTS West, one of the largest conventions on emerging manufacturing technology in the world.",
-        moreInfoLink: "",
-        embed: ``
+        moreInfoLink: "https://directory.imts.com/8_0/exhibitor/00090774/IMTS-Creators-Lounge",
+        embed: <video src={IMTSWestVideo} width="100%" controls></video>
     },
     {
         title: "Strip the Shame",
@@ -47,8 +48,13 @@ const projects = [
         roleDescription: "Reported to First A.D. and Production Coordinator to perform standard PA duties; organized craft services, assisted set decorators, distributed/collected walkies, ran errands, distributed schedules, coordinated talent, etc. Checked in frequently with production team, stayed nearby and ready to help at all times.",
         projectDescription: "Part of a campaign to promote safe drug usage and make people aware of fentanyl test strips being provided for them.",
         moreInfoLink: "https://www.wearegoodcreative.com/strip-the-shame",
-        embed: <iframe id="embed-STS" width="560" height="315" src="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Strip the Shame"></iframe>
-            
+        embed: 
+        <object width="100%" height="315px">
+            <param name="movie" value="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"/>
+            <param name="allowFullScreen" value="true"/>
+            <param name="allowscriptaccess" value="always"/>
+            <embed width="100%" height="100%" src="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="youtube-player" type="text/html" allowscriptaccess="always" allowfullscreen="true"/>
+        </object>
     },
     {
         title: "Is Mommy Okay?",
@@ -61,8 +67,14 @@ const projects = [
         roleDescription: "Reported to First A.D. and Production Coordinator to perform standard PA duties; organized craft services, assisted set decorators, distributed/collected walkies, ran errands, distributed schedules, coordinated talent, etc. Checked in frequently with production team, stayed nearby and ready to help at all times.",
         projectDescription: "Part of a social media campaign to bring awareness to maternal / post-partum mental health challenges by utilizing notable public figures.",
         moreInfoLink: "https://www.wearegoodcreative.com/is-mommy-okay",
-        embed:<iframe width="560" height="315" src="https://www.youtube.com/embed/4NiYhuYjEx4?si=EYPzo4xTYF3r8l2B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    },
+        embed:
+        <object width="100%" height="315px">
+            <param name="movie" value="https://www.youtube.com/embed/4NiYhuYjEx4?si=xF0HtBlZ7h-Jzp7w"/>
+            <param name="allowFullScreen" value="true"/>
+            <param name="allowscriptaccess" value="always"/>
+            <embed width="100%" height="100%" src="https://www.youtube.com/embed/4NiYhuYjEx4?si=xF0HtBlZ7h-Jzp7w" class="youtube-player" type="text/html" allowscriptaccess="always" allowfullscreen="true"/>
+        </object>
+        },
 ];
 
 export const projectRoutes = projects.map((project) => <Route path={`/projects/${project.path}`} element={ProjectPage(project)} key={project.path} />);
