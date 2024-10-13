@@ -8,11 +8,11 @@
 
 .homeHeadshot{
     background-color: gray;
-    height: 350px;
-    width: 300px;
+    width: 250px;
     margin: 20px;
 }
 
 .homeText{
     margin: 20px;
+    width: 30%;
 }
