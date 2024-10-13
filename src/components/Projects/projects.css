@@ -6,11 +6,13 @@
     align-items: center;
 }
 
-.projectTile{
-    background-color: gray;
+.projectTileLink{
     height: 350px;
     width: 500px;
     margin: 50px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
     
     display: flex;
     flex-direction: column;
@@ -21,14 +23,14 @@
     transition: 0.2s ease-in;
 }
 
-.projectTile:hover{
-    transform: scale(1.05);
+.projectTileLink:hover{
+    transform: scale(1.03);
     transition: 0.2s ease-out;
 }
 
-.projectTileLink{
-    color: black;
-    text-decoration: none;
+.projectTileImage{
+    height: 350px;
+    width: 500px;
 }
 
 .projectPage{
@@ -74,7 +76,7 @@
     width: 50%;
 }
 
-.projectPageDescription{
+.projectPageDescAndEmbed{
     width: 80vw;
     margin-top: 30px;
     display: flex;
@@ -83,13 +85,38 @@
     align-items: first baseline;
 }
 
+.projectPageDescription{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
 .projectPageEmbed{
     width: 50%;
 }
 
+.viewMoreButton{
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--accent);
+    color: var(--background);
+    text-decoration: none;
+}
+
 #bigJoes{
-    background-image: url('../../assets/BigJoesThumbnail.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+#IMTSwest{
+
+}
+
+#stripTheShame{
+
+}
+
+#isMommyOkay{
+
 }
