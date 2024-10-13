@@ -7,6 +7,8 @@ import { thumb_bigJoe, thumbIMTS, thumb_STS, thumb_IMO } from '../../assets/thum
 // Big Joe's Dent Removal commercial
 // IMTS West
 
+<script src="https://player.vimeo.com/api/player.js"></script>
+
 const projects = [
     {
         title: "Big Joe's Dent Removal",
@@ -45,8 +47,8 @@ const projects = [
         roleDescription: "Reported to First A.D. and Production Coordinator to perform standard PA duties; organized craft services, assisted set decorators, distributed/collected walkies, ran errands, distributed schedules, coordinated talent, etc. Checked in frequently with production team, stayed nearby and ready to help at all times.",
         projectDescription: "Part of a campaign to promote safe drug usage and make people aware of fentanyl test strips being provided for them.",
         moreInfoLink: "https://www.wearegoodcreative.com/strip-the-shame",
-        embed: <iframe title='strip-the-shame' src="https://player.vimeo.com/video/999632261?app_id=122963" width="426" height="240" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write"></iframe>
-        
+        embed: <iframe id="embed-STS" src="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Strip the Shame"></iframe>
+            
     },
     {
         title: "Is Mommy Okay?",
@@ -96,7 +98,7 @@ function ProjectPage(project){
 
 function ProjectTile(project, index){
     return(
-        <a className='projectTileLink' href={`/projects/${project.path}`} key={index} id={project.thumbnailID}>
+        <a className='projectTile' href={`/projects/${project.path}`} key={index} id={project.thumbnailID}>
             <img className='projectTileImage' src={project.thumbnail} alt={project.thumbnailAlt} />
             <h3>{project.title}</h3>
         </a>
