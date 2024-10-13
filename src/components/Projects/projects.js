@@ -22,7 +22,13 @@ const projects = [
         roleDescription: "Coordinated various aspects of production, ensuring seamless and on-schedule shoots of several local car wash commercials. Assisted grip and gaffers in lighting and framing shots. Drove set cars for various scenes. Meticulously tracked receipts and budgeted expenses for the production.",
         projectDescription: "One of several commercials made for local car wash and dent repair locations.",
         moreInfoLink: "",
-        embed: ``
+        embed: 
+        <object width="100%" height="315px">
+            <param name="movie" value="https://www.youtube.com/embed/J2SW92eQ_Jk?si=rUVrV8Be0hUbxLFg"/>
+            <param name="allowFullScreen" value="true"/>
+            <param name="allowscriptaccess" value="always"/>
+            <embed width="100%" height="100%" src="https://www.youtube.com/embed/J2SW92eQ_Jk?si=rUVrV8Be0hUbxLFg" class="youtube-player" type="text/html" allowscriptaccess="always" allowfullscreen="true"/>
+        </object>
     },
     {
         title: "IMTS West 2024",
@@ -53,7 +59,7 @@ const projects = [
             <param name="movie" value="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"/>
             <param name="allowFullScreen" value="true"/>
             <param name="allowscriptaccess" value="always"/>
-            <embed width="100%" height="100%" src="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" class="youtube-player" type="text/html" allowscriptaccess="always" allowfullscreen="true"/>
+            <embed width="100%" height="100%" src="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" type="text/html" allowscriptaccess="always" allowfullscreen="true"/>
         </object>
     },
     {
