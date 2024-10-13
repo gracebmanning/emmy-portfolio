@@ -55,12 +55,9 @@ const projects = [
         projectDescription: "Part of a campaign to promote safe drug usage and make people aware of fentanyl test strips being provided for them.",
         moreInfoLink: "https://www.wearegoodcreative.com/strip-the-shame",
         embed: 
-        <object width="100%" height="315px">
-            <param name="movie" value="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"/>
-            <param name="allowFullScreen" value="true"/>
-            <param name="allowscriptaccess" value="always"/>
-            <embed width="100%" height="100%" src="https://player.vimeo.com/video/999632261?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" type="text/html" allowscriptaccess="always" allowfullscreen="true"/>
-        </object>
+        <a id='embedSTS' href="https://vimeo.com/999632261" target="_blank" rel="noreferrer">
+            <img src={thumb_STS} />
+        </a>
     },
     {
         title: "Is Mommy Okay?",

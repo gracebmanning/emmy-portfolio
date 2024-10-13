@@ -111,11 +111,16 @@
     align-items: center;
 }
 
-#embed-STS{
+#embedSTS{
     display: inline;
     position:relative;
     width: 100%;
-    height: 100%;
+    height: 315px;
+}
+
+#embedSTS img{
+    width: 100%;
+    height: 315px;
 }
 
 @media (max-width: 1200px){
