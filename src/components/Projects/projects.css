@@ -1,0 +1,88 @@
+.projectTileContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectTile{
+    background-color: gray;
+    height: 350px;
+    width: 500px;
+    margin: 50px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transform: scale(1.0);
+    transition: 0.2s ease-in;
+}
+
+.projectTile:hover{
+    transform: scale(1.05);
+    transition: 0.2s ease-out;
+}
+
+.projectTileLink{
+    color: black;
+    text-decoration: none;
+}
+
+.projectPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectPage h2{
+    margin: 2px;
+}
+
+.projectPage h3{
+    margin: 2px;
+}
+
+.projectPageHeader{
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectPageDetails{
+    display: flex;
+    flex-direction: column;
+}
+
+.projectPageRole{
+    width: 80vw;
+    margin-top: 30px;
+    border-bottom: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:first baseline;
+}
+
+.projectRoleDesc{
+    width: 50%;
+}
+
+.projectPageDescription{
+    width: 80vw;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: first baseline;
+}
+
+.projectPageEmbed{
+    width: 50%;
+}
