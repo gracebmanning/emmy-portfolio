@@ -86,3 +86,10 @@
 .projectPageEmbed{
     width: 50%;
 }
+
+#bigJoes{
+    background-image: url('../../assets/BigJoesThumbnail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

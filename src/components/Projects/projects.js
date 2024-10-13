@@ -1,5 +1,6 @@
 import './projects.css';
 import { Route } from 'react-router-dom';
+import bigJoes from '../../assets/BigJoesThumbnail.png';
 
 // Is Mommy Okay?
 // Strip the Stigma
@@ -9,8 +10,8 @@ import { Route } from 'react-router-dom';
 const projects = [
     {
         title: "Big Joe's Dent Removal",
-        path: "is-mommy-okay",
-        thumbnail: "temp-thumbnail.jpg",
+        path: "big-joes-dent-removal",
+        thumbnail: bigJoes,
         date: "September 2024",
         company: "Bay 31 Productions",
         role: "Production Assistant",
@@ -20,7 +21,7 @@ const projects = [
     },
     {
         title: "IMTS West",
-        path: "is-mommy-okay",
+        path: "imts-west",
         thumbnail: "temp-thumbnail.jpg",
         date: "September 2024",
         company: "Corporate Streams",
@@ -31,7 +32,7 @@ const projects = [
     },
     {
         title: "Strip the Shame",
-        path: "is-mommy-okay",
+        path: "strip-the-shame",
         thumbnail: "temp-thumbnail.jpg",
         date: "July 2024",
         company: "Good Creative",

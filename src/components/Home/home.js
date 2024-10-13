@@ -5,7 +5,7 @@ export default function Home(){
     return(
         <div className='container'>
             <div className='homeContent'>
-                <img className='homeHeadshot' src={headshot} />
+                <img className='homeHeadshot' src={headshot} alt='image of Emmy holding a slate' />
                 <div className='homeText'>
                     <p>
                         hi, I'm Emmy!
