@@ -14,5 +14,10 @@
 
 .homeText{
     margin: 20px;
-    width: 30%;
+    width: 40%;
+    line-height: 1.5;
+}
+
+#projectsLink{
+    color: var(--accent);
 }
