@@ -1,14 +1,20 @@
 import './navigation.css';
+import { useState } from 'react';
 import resume from '../../assets/resume.pdf';
 import { MdLocalMovies } from "react-icons/md";
 import { BiSolidCameraMovie } from "react-icons/bi";
 import { IoDocumentText } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5";
 
 export default function Navigation(){
+    const [expanded, setExpanded] = useState(false);
+    function navMenuExpand(){
+        setExpanded(!expanded);
+    }
     return(
         <nav>
             <h1>Emmy Gardner</h1>
-            <ul className='navList'>
+            <ul className={expanded ? 'navListExpanded' : 'navList'}>
                 <li className='navItem'>
                     <a href="/">
                         <MdLocalMovies className='navIcon' />
@@ -28,6 +34,7 @@ export default function Navigation(){
                     </a>
                 </li>
             </ul>
+            <IoMenu className='navIcon navMenuIcon' onClick={navMenuExpand} />
         </nav>
     )
 }
