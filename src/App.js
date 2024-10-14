@@ -8,7 +8,7 @@ import PageNotFound from './components/PageNotFound/pageNotFound';
 function App() {
   return (
     <div className="App">
-    <Navigation />
+      <Navigation />
       <Routes>
         <Route path="*" element={<PageNotFound/>} />
         <Route path="/" element={<Home/>} />
