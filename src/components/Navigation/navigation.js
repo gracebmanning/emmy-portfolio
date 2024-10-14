@@ -1,4 +1,5 @@
 import './navigation.css';
+import resume from '../../assets/resume.pdf';
 import { MdLocalMovies } from "react-icons/md";
 import { BiSolidCameraMovie } from "react-icons/bi";
 import { IoDocumentText } from "react-icons/io5";
@@ -21,7 +22,7 @@ export default function Navigation(){
                     </a>
                 </li>
                 <li className='navItem'>
-                    <a href="/resume" target="_blank">
+                    <a href={resume} target='_blank' rel='noreferrer'>
                         <IoDocumentText className='navIcon' />
                         resumé
                     </a>
