@@ -20,6 +20,30 @@ body {
     font-style: normal;
 }
 
+/* width */
+::-webkit-scrollbar{
+    width: 1em;
+}
+
+/* track */
+::-webkit-scrollbar-track{
+    background: var(--background);
+}
+
+/* handle */
+::-webkit-scrollbar-thumb{
+    background: #d67b82;
+    border-radius: 20px;
+    border: 3px solid #d67b82;
+}
+
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover{
+    background: #d75660;
+    border: 3px solid #d75660;
+    cursor: pointer;
+}
+
 .container{
     width: 100%;
     margin: 20px;
