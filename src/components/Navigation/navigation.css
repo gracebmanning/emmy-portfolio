@@ -4,6 +4,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     margin: 0px 20px;
+    border-bottom: solid 1px black;
 }
 
 .navList{
@@ -39,4 +40,13 @@ nav{
 
 .navIcon{
     font-size: 22px;
+}
+
+@media only screen and (max-width: 768px){
+    .nav{
+        margin: 0px 5px;
+    }
+    .navItem{
+        margin: 0px 10px;
+    }
 }

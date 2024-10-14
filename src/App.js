@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="App">
     <Navigation />
-    <hr/>
       <Routes>
         <Route path="*" element={<PageNotFound/>} />
         <Route path="/" element={<Home/>} />

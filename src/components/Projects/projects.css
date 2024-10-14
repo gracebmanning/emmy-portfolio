@@ -1,4 +1,6 @@
 .projectTileContainer{
+    margin: 0px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -157,17 +159,19 @@
 }
 
 @media (max-width: 768px){
+    .projectTileContainer{
+        flex-direction: column;
+        margin: 0px;
+    }
+
     .projectTile{
-        transform: scale(0.8);
-        margin: 20px;
+        height: auto;
+        width: 350px;
+        margin: 10px;
     }
 
     .projectTileImage{
-        transform: scale(0.8);
-    }
-
-    .projectTile:hover{
-        transform: scale(0.83);
+        width: 350px;
     }
 
     .projectPageRole{

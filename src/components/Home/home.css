@@ -21,3 +21,18 @@
 #projectsLink{
     color: var(--accent);
 }
+
+@media only screen and (max-width: 768px){
+    .homeContent{
+        flex-direction: column;
+    }
+
+    .homeHeadshot{
+        width: 150px;
+    }
+
+    .homeText{
+        margin: 10px;
+        width: 80%;
+    }
+}
