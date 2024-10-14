@@ -13,7 +13,9 @@ export default function Navigation(){
     }
     return(
         <nav>
-            <h1>Emmy Gardner</h1>
+            <a className='navTitle' href='/'>
+                <h1>Emmy Gardner</h1>
+            </a>
             <ul className={expanded ? 'navListExpanded' : 'navList'}>
                 <li className='navItem'>
                     <a href="/">

@@ -8,6 +8,11 @@ nav{
     border-bottom: solid 1px black;
 }
 
+.navTitle{
+    text-decoration: none;
+    color: var(--text);
+}
+
 .navList{
     display: flex;
     flex-direction: row;
