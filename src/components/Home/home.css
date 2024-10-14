@@ -22,9 +22,10 @@
     color: var(--accent);
 }
 
-@media only screen and (max-width: 768px){
+@media (max-width: 768px){
     .homeContent{
         flex-direction: column;
+        margin: 0px;
     }
 
     .homeHeadshot{
@@ -32,7 +33,8 @@
     }
 
     .homeText{
-        margin: 10px;
+        margin: 0px;
         width: 80%;
+        text-align: justify;
     }
 }
