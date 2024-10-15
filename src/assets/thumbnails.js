@@ -1,8 +1,8 @@
-import thumb_bigJoe from './images/thumb_BigJoes.jpg';
-import thumb_IMTS2024 from './images/thumb_IMTS.png';
-import thumb_STS from './images/thumb_STS.png';
-import thumb_IMO from './images/thumb_IMO.jpg';
-import thumb_IMEMDM from './images/thumb_IME-MDM2024.png';
+import thumb_bigJoe from './images/thumbnails/thumb_BigJoes.jpg';
+import thumb_IMTS2024 from './images/thumbnails/thumb_IMTS.png';
+import thumb_STS from './images/thumbnails/thumb_STS.png';
+import thumb_IMO from './images/thumbnails/thumb_IMO.jpg';
+import thumb_IMEMDM from './images/thumbnails/thumb_IME-MDM2024.png';
 
 export{
     thumb_bigJoe,
