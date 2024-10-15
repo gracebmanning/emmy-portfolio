@@ -1,6 +1,6 @@
 import './home.css';
 import headshot from '../../assets/images/headshot.jpg';
-import { emmyAndMoose, bigJoesFrame1, bigJoesFrame2, camOperator } from '../../assets/filmStrip';
+import { emmyAndMoose, bigJoesFrame1, bigJoesFrame2, camOperator, gaffer, standingIn, PAEmmy, lockedIn, hiking, } from '../../assets/filmStrip';
 
 const filmStripImages = [
     {
@@ -27,7 +27,36 @@ const filmStripImages = [
         caption: `camera operation control room`,
         align: 'captionCenter'
     },
-    
+    {
+        image: gaffer,
+        alt: `Emmy working on a lighting setup on set.`,
+        caption: `gaffin' and laughin'`,
+        align: 'captionCenter'
+    },
+    {
+        image: standingIn,
+        alt: `looking at Emmy through a camera monitor`,
+        caption: `standing in like a champ`,
+        align: 'captionCenter'
+    },
+    {
+        image: PAEmmy,
+        alt: `walkie talkie with masking tape that reads "PA Emmy :)"`,
+        caption: `:)`,
+        align: 'captionCenter'
+    },
+    {
+        image: lockedIn,
+        alt: `Emmy looks at a computer monitor while operating multiple cameras`,
+        caption: `#lockedin`,
+        align: 'captionCenter'
+    },
+    {
+        image: hiking,
+        alt: `Emmy stands far away from the camera in front of a panoramic view of Los Angeles from the top of a mountain`,
+        caption: `spot the emmy`,
+        align: 'captionCenter'
+    },
 ]
 
 
