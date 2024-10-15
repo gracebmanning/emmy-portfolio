@@ -29,13 +29,12 @@
     color: var(--accent);
 }
 
-.homePhotoGallery{
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.filmStripRow{
+    display: block;
+}
+
+.filmStripColumn{
+    display: none;
 }
 
 /* Code from CSS Shapes: https://css-shape.com/film-strip/ */
@@ -45,7 +44,7 @@
     height: calc(24*var(--s));
     aspect-ratio: 1.25;
     background: 
-      conic-gradient(at 50% var(--s),var(--c) 75%,#0000 0) 
+      conic-gradient(at 60% var(--s),var(--c) 75%,#0000 0) 
       0 0/calc(2*var(--s)) calc(100% - var(--s)) padding-box;
     border: var(--s) solid var(--c);
     padding: calc(var(--s)*2.5) calc(var(--s)*1.5);
@@ -54,26 +53,16 @@
     filter: sepia(1) brightness(0.9) grayscale(.2);
     */
 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     img{
         height: calc(18*var(--s));
-    }
-
-    p{
-        color: var(--background);
-        margin: 0px;
-        text-wrap: wrap;
-    }
-}
-
-.filmStripPhoto{
-    margin-left: 20px;
-    margin-right: 20px;
-
-    display:table;
-
-    p{
-        display:table-caption;
-        caption-side:bottom;
     }
 }
 
@@ -83,12 +72,37 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
+
+    white-space: nowrap;
     animation: loop 25s linear infinite;
 }
 
 @keyframes loop {
     0% {transform: translateX(0%);}
     100% {transform: translateX(-50%);}
+}
+
+.filmStripItem{
+    margin-left: 20px;
+    margin-right: 20px;
+    display: table;
+}
+
+.filmStripCaption{
+    display: table-caption;
+    caption-side: bottom;
+
+    color: var(--background);
+    margin: 0px;
+    text-wrap: wrap;
+}
+
+.captionJustify{
+    text-align: justify;
+}
+
+.captionCenter{
+    text-align: center;
 }
 
 @media (max-width: 768px){
@@ -105,5 +119,36 @@
         margin: 0px;
         width: 80%;
         text-align: justify;
+    }
+
+    .filmStripRow{
+        display: none;
+    }
+    
+    .filmStripColumn{
+        display: block;
+        width: 100%;
+    }
+
+    .filmStrip{
+        margin: 0px;
+    }
+
+    .scroll{
+        animation: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filmStripItem{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .filmStripCaption{
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }

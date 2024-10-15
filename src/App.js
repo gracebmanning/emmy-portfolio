@@ -4,6 +4,7 @@ import Navigation from './components/Navigation/navigation';
 import Home from './components/Home/home';
 import Projects, { projectRoutes } from './components/Projects/projects';
 import PageNotFound from './components/PageNotFound/pageNotFound';
+import Footer from './components/Footer/footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/projects" element={<Projects/>} />
         {projectRoutes}
       </Routes>
+      <Footer/>
     </div>
   );
 }

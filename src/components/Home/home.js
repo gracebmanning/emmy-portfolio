@@ -30,19 +30,35 @@ export default function Home(){
                     </p>
                 </div>
             </div>
-            <div className='homePhotoGallery filmStrip'>
+            <div className='filmStripRow filmStrip'>
                 <div className='scroll'>
-                    <div className='filmStripPhoto'>
+                    <div className='filmStripItem'>
                         <img src={emmyAndMoose} alt='Emmy sitting with Moose, her orange cat, in her lap while working at her laptop.' />
-                        <p>my diligent assistant Moose and i hard at work on this very website</p>
+                        <p className='filmStripCaption captionJustify'>my diligent assistant Moose and i hard at work on this very website</p>
                     </div>
-                    <div className='filmStripPhoto'>
+                    <div className='filmStripItem'>
                         <img src={bigJoesFrame1} alt='Emmy puts her hand up to her, pausing in anticipation.' />
-                        <p>wait...</p>
+                        <p className='filmStripCaption captionCenter'>wait...</p>
                     </div>
-                    <div className='filmStripPhoto'>
+                    <div className='filmStripItem'>
                         <img src={bigJoesFrame2} alt='Emmy pulls down her sunglasses, looking shocked.' />
-                        <p>woah!</p>
+                        <p className='filmStripCaption captionCenter'>woah!</p>
+                    </div>
+                </div>
+            </div>
+            <div className='filmStripColumn'>
+                <div className='scroll'>
+                    <div className='filmStrip filmStripItem'>
+                        <img src={emmyAndMoose} alt='Emmy sitting with Moose, her orange cat, in her lap while working at her laptop.' />
+                        <p className='filmStripCaption captionJustify'>my diligent assistant Moose and i hard at work on this very website</p>
+                    </div>
+                    <div className='filmStrip filmStripItem'>
+                        <img src={bigJoesFrame1} alt='Emmy puts her hand up to her, pausing in anticipation.' />
+                        <p className='filmStripCaption captionCenter'>wait...</p>
+                    </div>
+                    <div className='filmStrip filmStripItem'>
+                        <img src={bigJoesFrame2} alt='Emmy pulls down her sunglasses, looking shocked.' />
+                        <p className='filmStripCaption captionCenter'>woah!</p>
                     </div>
                 </div>
             </div>
