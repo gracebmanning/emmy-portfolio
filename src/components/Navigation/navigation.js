@@ -1,6 +1,6 @@
 import './navigation.css';
 import { useState } from 'react';
-import resume from '../../assets/resume.pdf';
+import resume from '../../assets/documents/resume.pdf';
 import { MdLocalMovies } from "react-icons/md";
 import { BiSolidCameraMovie } from "react-icons/bi";
 import { IoDocumentText } from "react-icons/io5";

@@ -1,7 +1,7 @@
 import './projects.css';
 import { Route } from 'react-router-dom';
 import { thumb_bigJoe, thumb_IMTS2024, thumb_STS, thumb_IMO, thumb_IMEMDM } from '../../assets/thumbnails';
-import IMTSWestVideo from '../../assets/IMTS-West-2024.mp4';
+import IMTS2024Video from '../../assets/videos/IMTS-2024.mp4';
 import { MdArrowOutward } from "react-icons/md";
 
 const projects = [
@@ -57,7 +57,7 @@ const projects = [
         roleDescription: `on this set, i operated 6 Sony FR7 PTZ cameras simultaneously with precise control, efficiently following the shot requests of the Technical Director under pressure of a live-streamed event. i gave creative and technical input on set design, blocking and graphics, and assisted in set up and striking of all equipment including cameras, audio equipment, monitors.`,
         projectDescription: `the embedded video is part of many included in a live to tape series of interviews and segments at IMTS, one of the largest conventions on emerging manufacturing technology in the world. utilized notable figures within the manufacturing and engineering industries to spearhead interviews and discussions about emerging technologies and changes in the industry.`,
         moreInfoLink: "https://directory.imts.com/8_0/exhibitor/00090774/IMTS-Creators-Lounge",
-        embed: <video src={IMTSWestVideo} width="100%" controls></video>
+        embed: <video src={IMTS2024Video} width="100%" controls></video>
     },
     {
         title: "Strip the Shame",
