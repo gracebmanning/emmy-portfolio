@@ -4,12 +4,6 @@ import { emmyAndMoose, bigJoesFrame1, bigJoesFrame2, camOperator, gaffer, standi
 
 const filmStripImages = [
     {
-        image: emmyAndMoose,
-        alt: `Emmy sitting with Moose, her orange cat, in her lap while working at her laptop.`,
-        caption: `my diligent assistant Moose and i hard at work on this very website`,
-        align: 'captionJustify'
-    },
-    {
         image: bigJoesFrame1,
         alt: `Emmy puts her hand up to her, pausing in anticipation.`,
         caption: `wait...`,
@@ -28,6 +22,19 @@ const filmStripImages = [
         align: 'captionCenter'
     },
     {
+        image: PAEmmy,
+        alt: `walkie talkie with masking tape that reads "PA Emmy :)"`,
+        caption: `:)`,
+        align: 'captionCenter'
+    },
+    {
+        image: emmyAndMoose,
+        alt: `Emmy sitting with Moose, her orange cat, in her lap while working at her laptop.`,
+        caption: `my diligent assistant Moose and i hard at work on this very website`,
+        align: 'captionJustify'
+    },
+    
+    {
         image: gaffer,
         alt: `Emmy working on a lighting setup on set.`,
         caption: `gaffin' and laughin'`,
@@ -39,12 +46,7 @@ const filmStripImages = [
         caption: `standing in like a champ`,
         align: 'captionCenter'
     },
-    {
-        image: PAEmmy,
-        alt: `walkie talkie with masking tape that reads "PA Emmy :)"`,
-        caption: `:)`,
-        align: 'captionCenter'
-    },
+    
     {
         image: lockedIn,
         alt: `Emmy looks at a computer monitor while operating multiple cameras`,

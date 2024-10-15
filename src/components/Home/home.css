@@ -41,7 +41,7 @@
 .filmStrip {
     --s: 10px; /* control the size */
     --c: #222;
-    height: calc(22*var(--s));
+    height: calc(25*var(--s));
     aspect-ratio: 1.25;
     background: 
       conic-gradient(at 60% var(--s),var(--c) 75%,#0000 0) 
@@ -57,30 +57,32 @@
     margin-bottom: 50px;
     width: 105%;
     transform: rotate(-3deg);
+    overflow-x: hidden;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 
     img{
-        height: calc(16*var(--s));
+        height: calc(22*var(--s));
     }
 }
 
 .scroll{
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: flex-start;
 
     white-space: nowrap;
-    animation: loop 25s linear infinite;
+    animation: loop 22s linear infinite;
 }
 
 @keyframes loop {
     0% {transform: translateX(0%);}
-    100% {transform: translateX(-50%);}
+    100% {transform: translateX(-100%);}
 }
 
 .filmStripItem{
