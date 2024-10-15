@@ -1,8 +1,35 @@
 import './home.css';
 import headshot from '../../assets/images/headshot.jpg';
-import emmyAndMoose from '../../assets/images/emmy-and-moose.png';
-import bigJoesFrame1 from '../../assets/images/bigjoes-frame1.jpg';
-import bigJoesFrame2 from '../../assets/images/bigjoes-frame2.jpg';
+import { emmyAndMoose, bigJoesFrame1, bigJoesFrame2, camOperator } from '../../assets/filmStrip';
+
+const filmStripImages = [
+    {
+        image: emmyAndMoose,
+        alt: `Emmy sitting with Moose, her orange cat, in her lap while working at her laptop.`,
+        caption: `my diligent assistant Moose and i hard at work on this very website`,
+        align: 'captionJustify'
+    },
+    {
+        image: bigJoesFrame1,
+        alt: `Emmy puts her hand up to her, pausing in anticipation.`,
+        caption: `wait...`,
+        align: 'captionCenter'
+    },
+    {
+        image: bigJoesFrame2,
+        alt: `Emmy pulls down her sunglasses, looking shocked.`,
+        caption: `woah!`,
+        align: 'captionCenter'
+    },
+    {
+        image: camOperator,
+        alt: `Emmy sits at a camera operating station (table with knobs and buttons, computer monitors with camera displays).`,
+        caption: `camera operation control room`,
+        align: 'captionCenter'
+    },
+    
+]
+
 
 export default function Home(){
     return(
@@ -32,34 +59,26 @@ export default function Home(){
             </div>
             <div className='filmStripRow filmStrip'>
                 <div className='scroll'>
-                    <div className='filmStripItem'>
-                        <img src={emmyAndMoose} alt='Emmy sitting with Moose, her orange cat, in her lap while working at her laptop.' />
-                        <p className='filmStripCaption captionJustify'>my diligent assistant Moose and i hard at work on this very website</p>
-                    </div>
-                    <div className='filmStripItem'>
-                        <img src={bigJoesFrame1} alt='Emmy puts her hand up to her, pausing in anticipation.' />
-                        <p className='filmStripCaption captionCenter'>wait...</p>
-                    </div>
-                    <div className='filmStripItem'>
-                        <img src={bigJoesFrame2} alt='Emmy pulls down her sunglasses, looking shocked.' />
-                        <p className='filmStripCaption captionCenter'>woah!</p>
-                    </div>
+                    {filmStripImages.map((item, index) => {
+                        return(
+                        <div className='filmStripItem' key={index}>
+                            <img src={item.image} alt={item.alt} />
+                            <p className={`filmStripCaption ${item.align}`}>{item.caption}</p>
+                        </div>
+                        )
+                    })}
                 </div>
             </div>
             <div className='filmStripColumn'>
                 <div className='scroll'>
-                    <div className='filmStrip filmStripItem'>
-                        <img src={emmyAndMoose} alt='Emmy sitting with Moose, her orange cat, in her lap while working at her laptop.' />
-                        <p className='filmStripCaption captionJustify'>my diligent assistant Moose and i hard at work on this very website</p>
-                    </div>
-                    <div className='filmStrip filmStripItem'>
-                        <img src={bigJoesFrame1} alt='Emmy puts her hand up to her, pausing in anticipation.' />
-                        <p className='filmStripCaption captionCenter'>wait...</p>
-                    </div>
-                    <div className='filmStrip filmStripItem'>
-                        <img src={bigJoesFrame2} alt='Emmy pulls down her sunglasses, looking shocked.' />
-                        <p className='filmStripCaption captionCenter'>woah!</p>
-                    </div>
+                    {filmStripImages.map((item, index) => {
+                        return(
+                        <div className='filmStrip filmStripItem' key={index}>
+                            <img src={item.image} alt={item.alt} />
+                            <p className={`filmStripCaption ${item.align}`}>{item.caption}</p>
+                        </div>
+                        )
+                    })}
                 </div>
             </div>
         </div>
