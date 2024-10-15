@@ -1,3 +1,10 @@
+.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .homeContent{
     width: 100%;
     display: flex;
@@ -20,6 +27,68 @@
 
 #projectsLink{
     color: var(--accent);
+}
+
+.homePhotoGallery{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Code from CSS Shapes: https://css-shape.com/film-strip/ */
+.filmStrip {
+    --s: 10px; /* control the size */
+    --c: #222;
+    height: calc(24*var(--s));
+    aspect-ratio: 1.25;
+    background: 
+      conic-gradient(at 50% var(--s),var(--c) 75%,#0000 0) 
+      0 0/calc(2*var(--s)) calc(100% - var(--s)) padding-box;
+    border: var(--s) solid var(--c);
+    padding: calc(var(--s)*2.5) calc(var(--s)*1.5);
+    box-sizing: content-box;
+    /* you can add a filter for an oldish effect 
+    filter: sepia(1) brightness(0.9) grayscale(.2);
+    */
+
+    img{
+        height: calc(18*var(--s));
+    }
+
+    p{
+        color: var(--background);
+        margin: 0px;
+        text-wrap: wrap;
+    }
+}
+
+.filmStripPhoto{
+    margin-left: 20px;
+    margin-right: 20px;
+
+    display:table;
+
+    p{
+        display:table-caption;
+        caption-side:bottom;
+    }
+}
+
+.scroll{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    animation: loop 25s linear infinite;
+}
+
+@keyframes loop {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-50%);}
 }
 
 @media (max-width: 768px){
