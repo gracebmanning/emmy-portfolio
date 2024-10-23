@@ -129,14 +129,18 @@
     }
     
     .filmStripColumn{
-        display: block;
+        display: inline;
         width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .filmStrip::before{
+        transform: rotate(90deg);
     }
 
     .filmStrip{
         margin: 0px;
-        width: 100%;
-        transform: rotate(0deg);
+        width: 100%;  
     }
 
     .scroll{
