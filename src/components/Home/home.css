@@ -140,7 +140,11 @@
 
     .filmStrip{
         margin: 0px;
-        width: 100%;  
+        width: 100%; 
+        
+        img{
+            height: calc(20*var(--s));
+        }
     }
 
     .scroll{
