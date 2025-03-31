@@ -18,25 +18,31 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #fdfdf8;
   }
 }
 
 @layer base {
   html {
+    min-height: 100%;
     scroll-behavior: smooth;
   }
 
   body {
     margin: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: hidden;
     background-color: var(--background);
 
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+  }
+
+  main {
+    width: 100%;
+    margin: 0px;
   }
 
   h1 {
