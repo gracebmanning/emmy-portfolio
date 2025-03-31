@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-display: "Inter", "sans-serif";
+  --foreground: black;
+  --background: #fdfdf8;
+  --color-text: black;
+  --color-accent: #da2030;
 }
 
 @theme inline {
@@ -19,8 +22,75 @@
   }
 }
 
-body {
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--background);
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 20px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0px;
+  list-style-type: none;
+}
+
+.navListExpanded {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 0px;
+  list-style-type: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1em;
+}
+
+/* track */
+::-webkit-scrollbar-track {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* handle */
+::-webkit-scrollbar-thumb {
+  background: #d67b82;
+  border-radius: 20px;
+  border: 3px solid #d67b82;
+}
+
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d75660;
+  border: 3px solid #d75660;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0px;
+  }
 }
