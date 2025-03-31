@@ -38,6 +38,38 @@
     font-optical-sizing: auto;
     font-style: normal;
   }
+
+  h1 {
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    margin: 5px;
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    margin: 5px 0;
+    line-height: 1.2;
+  }
+  h3 {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    margin: 5px 0;
+    color: var(--color-teal);
+  }
+  h4 {
+    font-size: var(--text-xl);
+    font-weight: 500;
+    margin: 5px 0;
+    color: var(--teal);
+  }
+  h5 {
+    font-size: var(--text-lg);
+    font-weight: 500;
+  }
+  p {
+    margin: 5px 0;
+  }
 }
 
 /* width */
