@@ -1,5 +1,16 @@
-export default function Resume(){
+"use client"
+import { BasicPageLayout } from "../components/basicPageLayout"
+
+function Resume(){
     return(
-        <iframe src="../../public/documents/resume.pdf" />
+        <iframe src="/documents/resume.pdf" style={{width: "100%", aspectRatio:"22/17"}} />
     )
+}
+
+export default function Page(){
+  return(
+    <BasicPageLayout>
+      <Resume/>
+    </BasicPageLayout>
+  )
 }
