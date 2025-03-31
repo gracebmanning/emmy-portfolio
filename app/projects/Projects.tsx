@@ -31,7 +31,7 @@ function Projects(posts:SanityDocument[]) {
   return (
     <div className="m-5 flex flex-col items-center">
       <h2 className="text-center text-3xl mb-5">
-        'Chure Thing Archive Collection
+        Projects
       </h2>
       {/* Sorting & Search Bar Container */}
       <div className="w-11/12 flex justify-end items-center gap-2.5 mb-10">
@@ -48,7 +48,7 @@ function Projects(posts:SanityDocument[]) {
           {/* Search Button */}
           <button
             onClick={() => setSearchQuery(searchInput)}
-            className="p-2.5 ml-0.5 mr-2.5 text-base bg-black text-text border-none rounded-md cursor-pointer hover:bg-gray-800"
+            className="p-2.5 ml-0.5 mr-2.5 text-base bg-black text-background border-none rounded-md cursor-pointer hover:bg-gray-800"
           >
             Search
           </button>
