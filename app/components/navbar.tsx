@@ -5,6 +5,18 @@ import { BiSolidCameraMovie } from "react-icons/bi";
 import { IoDocumentText } from "react-icons/io5";
 import { IoMenu } from "react-icons/io5";
 import Link from 'next/link';
+import { IconType } from 'react-icons';
+
+function NavItem({text, Icon}:{text:string, Icon:IconType}){
+    return(
+        <li className="md:mt-0 md:mb-0 md:ml-5 md:mr-5 mt-2.5 mb-2.5 mr-3.5 ml-3.5">
+            <Link href="/" className="flex flex-row justify-center items-center scale-100 ease-in duration-200 hover:scale-105 hover:ease-out hover:text-accent">
+                <Icon className='text-2xl md:m-0 mr-1' />
+                {text}
+            </Link>
+        </li>
+    )
+}
 
 export default function Navbar(){
     const [expanded, setExpanded] = useState(false);
@@ -12,31 +24,16 @@ export default function Navbar(){
         setExpanded(!expanded);
     }
     return(
-        <nav className="w-screen flex flex-row justify-between items-center pl-[20px] pr-[20px]">
-            <Link className='navTitle' href='/'>
+        <nav className="w-screen flex flex-row justify-between items-center pl-[20px] pr-[20px] md:m-0 mr-[5px] ml-[5px]">
+            <Link className='text-text' href='/'>
                 <h1>Emmy Gardner</h1>
             </Link>
             <ul className={expanded ? 'navListExpanded' : 'navList'}>
-                <li className='navItem'>
-                    <Link href="/">
-                        <MdLocalMovies className='navIcon' />
-                        home
-                    </Link>
-                </li>
-                <li className='navItem'>
-                    <Link href="/projects">
-                        <BiSolidCameraMovie className='navIcon' />
-                        projects
-                    </Link>
-                </li>
-                <li className='navItem'>
-                    <Link href='/resume' target='_blank' rel='noreferrer'>
-                        <IoDocumentText className='navIcon' />
-                        resumé
-                    </Link>
-                </li>
+                <NavItem text="home" Icon={MdLocalMovies} />
+                <NavItem text="projects" Icon={BiSolidCameraMovie} />
+                <NavItem text="resumé" Icon={IoDocumentText} />
             </ul>
-            <IoMenu className='navIcon navMenuIcon' onClick={navMenuExpand} />
+            <IoMenu className='text-2xl navIcon navMenuIcon' onClick={navMenuExpand} />
         </nav>
     )
 }
