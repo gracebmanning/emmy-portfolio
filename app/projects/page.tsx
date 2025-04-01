@@ -10,7 +10,7 @@ export default async function Page() {
   const projects = await client.fetch<SanityDocument[]>(allProjectsQuery, {}, options);
   return(
     <BasicPageLayout>
-        <Projects {...projects} />
+        <Projects projects={projects} />
     </BasicPageLayout>
   );
 }

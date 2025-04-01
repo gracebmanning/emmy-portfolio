@@ -57,6 +57,7 @@ export const projectType = defineType({
     defineField({
       name: 'role',
       type: 'string',
+      description: 'if multiple rows, separate by commas. Ex: Role 1, Role 2, Role 3'
     }),
     defineField({
       name: 'roleDescription',

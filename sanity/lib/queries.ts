@@ -14,6 +14,7 @@ export const allProjectsQuery = groq`*[_type == "project"] {
     thumbnailAlt,
     month,
     year,
+    company,
     role
 }`;
 
