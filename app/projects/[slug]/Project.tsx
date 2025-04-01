@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
-import { type SanityDocument, PortableText } from "next-sanity";
+import { type SanityDocument } from "next-sanity";
 import { MdArrowOutward } from "react-icons/md";
+import { EmbedVideoFile, EmbedYouTubeVideo, EmbedOtherHostedVideo } from "@/app/components/embed";
 
 function ProjectPage({ project }: {project: SanityDocument}) {
       return(
@@ -32,7 +33,9 @@ function ProjectPage({ project }: {project: SanityDocument}) {
                     </a>}
               </div>
               <div className="md:w-[50%] w-[90%] flex flex-row justify-center items-center">
-                  {project.embed}
+                    {project.embedType=="1" && <EmbedVideoFile videoSource={project.videoFile} />}
+                    {project.embedType=="2" && <EmbedYouTubeVideo videoSource={project.youtubeLink} />}
+                    {project.embedType=="3" && <EmbedOtherHostedVideo videoSource={project.otherVideoLink} imageSource={project.videoThumbnail} imageAlt={project.videoThumbnailAlt} />}
               </div>
           </div>
       </div>
