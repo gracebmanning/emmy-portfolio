@@ -4,7 +4,7 @@ import { type SanityDocument, PortableText } from "next-sanity";
 
 function ProjectPage({ project }: {project: SanityDocument}) {
     return (
-        <main className="container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
+        <main className="w-full md:m-5 m-0 min-h-screen max-w-3xl p-8 flex flex-col gap-4">
           <Link href="/projects" className="hover:underline">
             ← Back to projects
           </Link>
