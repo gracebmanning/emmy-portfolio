@@ -16,7 +16,7 @@ const ProjectCard = ({ project }: {project: SanityDocument}) => {
         </div>
       </div>
       <div className="px-5 pb-2">
-        {project.role.split(',').map((role:string, index:number)=>(
+        {project.role.split(";").map((role:string, index:number)=>(
           <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{role.trim()}</span>
         ))}
       </div>
