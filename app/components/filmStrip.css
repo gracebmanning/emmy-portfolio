@@ -16,7 +16,7 @@
       conic-gradient(at 60% var(--s),var(--c) 75%,#0000 0) 
       0 0/calc(2*var(--s)) calc(100% - var(--s)) padding-box;
     border: var(--s) solid var(--c);
-    padding: calc(var(--s)*2.5) calc(var(--s)*1.5);
+    padding: calc(var(--s)*2) calc(var(--s)*1.5);
     box-sizing: content-box;
     /* you can add a filter for an oldish effect 
     filter: sepia(1) brightness(0.9) grayscale(.2);
@@ -34,12 +34,14 @@
     overflow-y: hidden;
 
     img{
-        height: calc(22*var(--s));
+        margin: 0px;
+        object-fit: contain;
     }
 }
 
 .scroll{
     width: 100vw;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -64,7 +66,7 @@
     display: table-caption;
     caption-side: bottom;
 
-    color: var(--background);
+    color: #fdfdf8;
     margin: 0px;
     text-wrap: wrap;
 }
@@ -91,7 +93,6 @@
     .filmStrip::before{
         transform: rotate(90deg);
     }
-
     .filmStrip{
         margin: 0px;
         width: 100%; 

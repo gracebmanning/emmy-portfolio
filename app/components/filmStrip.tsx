@@ -68,32 +68,35 @@ const filmStripImages = [
     },
 ]
 
-export default function FilmStrip(){
+export function FilmStripRow(){
     return(
-        <div className='w-full'>
-            <div className='filmStripRow filmStrip'>
-                <div className='scroll'>
-                    {filmStripImages.map((item, index) => {
-                        return(
-                        <div className='filmStripItem' key={index}>
-                            <img src={item.image.src} alt={item.alt} />
-                            <p className={`filmStripCaption ${item.align}`}>{item.caption}</p>
-                        </div>
-                        )
-                    })}
-                </div>
+        <div className='filmStripRow filmStrip'>
+            <div className='scroll'>
+                {filmStripImages.map((item, index) => {
+                    return(
+                    <div className='filmStripItem' key={index}>
+                        <img src={item.image.src} alt={item.alt} />
+                        <p className={`filmStripCaption ${item.align}`}>{item.caption}</p>
+                    </div>
+                    )
+                })}
             </div>
-            <div className='filmStripColumn'>
-                <div className='scroll'>
-                    {filmStripImages.map((item, index) => {
-                        return(
-                        <div className='filmStrip filmStripItem' key={index}>
-                            <img src={item.image.src} alt={item.alt} />
-                            <p className={`filmStripCaption ${item.align}`}>{item.caption}</p>
-                        </div>
-                        )
-                    })}
-                </div>
+        </div>
+    )
+}
+
+export function FilmStripColumn(){
+    return( 
+        <div className='filmStripColumn'>
+            <div className='scroll'>
+                {filmStripImages.map((item, index) => {
+                    return(
+                    <div className='filmStrip filmStripItem' key={index}>
+                        <img src={item.image.src} alt={item.alt} />
+                        <p className={`filmStripCaption ${item.align}`}>{item.caption}</p>
+                    </div>
+                    )
+                })}
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { BasicPageLayout } from "./components/basicPageLayout";
-import FilmStrip from "./components/filmStrip";
+import { FilmStripRow, FilmStripColumn } from "./components/filmStrip";
 
 function Home() {
   return(
@@ -28,7 +28,8 @@ function Home() {
                 </p>
             </div>
         </div>
-        <FilmStrip/>
+        <FilmStripRow/>
+        <FilmStripColumn/>
     </div>
 )
 }
