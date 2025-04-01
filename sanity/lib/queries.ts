@@ -1,31 +1,37 @@
 import { groq } from "next-sanity";
 
+// title, slug, thumbnail, thumbnailAlt, month, year, 
+// company, companyLink (make <a> if link is not empty),
+// role, roleDescription, projectDescription,
+// moreInfoLink, embed (<video> or <a> or <object>)
+
 // Get all projects
-export const allProjectsQuery = groq`*[_type == "post"] {
+export const allProjectsQuery = groq`*[_type == "project"] {
     _id,
-    _createdAt,
     title,
-    slug,
-    thumbnailFileName,
+    "slug": slug.current,
+    thumbnail,
     thumbnailAlt,
+    month,
     year,
-    tags
+    role
 }`;
 
 // Get a single project by its slug
 export const projectQuery = groq`*[_type == "project" && slug.current == $slug][0]{ 
     _id,
-    _createdAt,
     title,
-    slug,
-    thumbnailFileName,
+    "slug": slug.current,
+    thumbnail,
     thumbnailAlt,
+    month,
     year,
-    tags,
-    imageBucketName,
-    imageFileName,
-    numImages,
-    body
+    company,
+    companyLink,
+    role, 
+    roleDescription, 
+    projectDescription,
+    moreInfoLink
   }`;
 
 // get all project slugs

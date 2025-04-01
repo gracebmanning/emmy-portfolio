@@ -1,9 +1,14 @@
 import {DocumentTextIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
-export const postType = defineType({
-  name: 'post',
-  title: 'Post',
+// title, slug, thumbnail, thumbnailAlt, month, year, 
+// company, companyLink (make <a> if link is not empty),
+// role, roleDescription, projectDescription,
+// moreInfoLink, embed (<video> or <a> or <object>)
+
+export const projectType = defineType({
+  name: 'project',
+  title: 'Project',
   type: 'document',
   icon: DocumentTextIcon,
   fields: [
@@ -19,47 +24,60 @@ export const postType = defineType({
       },
     }),
     defineField({
-      name: 'author',
-      type: 'reference',
-      to: {type: 'author'},
-    }),
-    defineField({
-      name: 'mainImage',
+      name: 'thumbnail',
       type: 'image',
       options: {
         hotspot: true,
       },
       fields: [
         defineField({
-          name: 'alt',
+          name: 'thumbnailAlt',
           type: 'string',
           title: 'Alternative text',
         })
       ]
     }),
     defineField({
-      name: 'categories',
-      type: 'array',
-      of: [defineArrayMember({type: 'reference', to: {type: 'category'}})],
+      name: 'month',
+      type: 'string',
     }),
     defineField({
-      name: 'publishedAt',
-      type: 'datetime',
+      name: 'year',
+      type: 'number',
     }),
     defineField({
-      name: 'body',
-      type: 'blockContent',
+      name: 'company',
+      type: 'string',
     }),
+    defineField({
+      name: 'companyLink',
+      type: 'url',
+      description: 'optional field - if empty, no link button will show'
+    }),
+    defineField({
+      name: 'role',
+      type: 'string',
+    }),
+    defineField({
+      name: 'roleDescription',
+      type: 'text',
+    }),
+    defineField({
+      name: 'projectDescription',
+      type: 'text',
+    }),
+    defineField({
+      name: 'moreInfoLink',
+      type: 'url',
+      description: 'optional field - if empty, no link button will show'
+    }),
+    // add embed field. Embed type (YouTube video, video file, other hosted video?)
+    // thumbnail image, thumbnail alt (optional)
   ],
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
-      media: 'mainImage',
-    },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
+      media: 'thumbnail',
     },
   },
 })
