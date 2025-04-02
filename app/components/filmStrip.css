@@ -1,10 +1,64 @@
-.filmStripRow{
-    display: block;
-}
-
 .filmStripColumn{
     display: none;
 }
+
+.slick-list{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 300px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.film-strip-slide {
+    height: 250px; /* Adjust as needed */
+    width: 100%;
+    margin-right: 30px; /* Spacing between slides */
+    position: relative; /* For image positioning */
+    text-align: center;
+}
+
+.film-strip-image {
+    width: 100%; /* Make the image fill the slide width */
+    height: 100%; /* Make the image fill the slide height */
+    object-fit: contain;
+}
+
+.film-strip-caption{
+    max-width: 400px;
+    width: 100%;
+    color: white;
+}
+
+.slick-prev {
+    left: 2% !important;
+    z-index: 1;
+}
+.slick-next {
+    right: 2% !important;
+    z-index: 1;
+}
+
+.filmStripNew{
+    --background: rgba(0, 0, 0, .9);
+    --size: 10px;
+    background-image:
+      linear-gradient(to right, var(--background) var(--size), transparent var(--size)),
+      linear-gradient(to bottom, var(--background) var(--size), transparent var(--size)),
+      linear-gradient(to right, var(--background) var(--size), transparent var(--size)),
+      linear-gradient(to bottom, var(--background) var(--size), transparent var(--size)),
+      linear-gradient(to bottom, transparent var(--size), var(--background) var(--size));
+    background-size: calc(var(--size) * 2) var(--size), calc(var(--size) * 2) var(--size), calc(var(--size) * 2) var(--size), calc(var(--size) * 2) var(--size), 100% calc(100% - var(--size) * 3);
+    background-repeat: repeat-x;
+    background-position: 0 var(--size), top left, 0 calc(100% - var(--size)), bottom left, 0 var(--size);
+    padding-top: calc(var(--size) * 3.5);
+    padding-bottom: calc(var(--size) * 2);
+    padding-right: calc(var(--size) * 2);
+    padding-left: calc(var(--size) * 2);
+    box-sizing: border-box;
+  }
+
 
 /* Code from CSS Shapes: https://css-shape.com/film-strip/ */
 .filmStrip {

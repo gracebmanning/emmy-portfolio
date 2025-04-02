@@ -4,8 +4,8 @@ import { FilmStripRow, FilmStripColumn } from "./components/filmStrip";
 
 function Home() {
   return(
-    <div className='w-full flex flex-col justify-center items-center md:m-5 m-0'>
-        <div className='w-screen flex md:flex-row flex-col justify-center items-center m-0'>
+    <div className='w-full m-0'>
+        <div className='w-screen flex md:flex-row flex-col justify-center items-center md:m-5 m-0'>
             <img className='bg-gray-500 md:w-[250px] w-[150px] m-5' src="/images/headshot.jpg" alt='Emmy holding a slate at a production' />
             <div className='md:m-5 m-0 md:w-[40%] w-[80%] md:text-left text-justify leading-[1.5]'>
                 <p>
