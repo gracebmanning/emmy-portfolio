@@ -40,6 +40,7 @@
     z-index: 1;
 }
 
+/* code from: https://codepen.io/Snugug/pen/bzRwyw */
 .filmStripNew{
     --background: rgba(0, 0, 0, .9);
     --size: 10px;

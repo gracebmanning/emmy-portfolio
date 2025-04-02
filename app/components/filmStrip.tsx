@@ -1,5 +1,10 @@
 "use client"
 import './filmStrip.css';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useState, useEffect } from 'react';
+
 import emmyAndMoose from '../../public/images/filmStrip/emmy-and-moose.png';
 import bigJoesFrame1 from '../../public/images/filmStrip/bigjoes-frame1.jpg';
 import bigJoesFrame2 from '../../public/images/filmStrip/bigjoes-frame2.jpg';
@@ -9,10 +14,6 @@ import standingIn from '../../public/images/filmStrip/standing-in.jpg';
 import PAEmmy from '../../public/images/filmStrip/PA-Emmy.jpg';
 import lockedIn from '../../public/images/filmStrip/locked-in.jpg';
 import hiking from '../../public/images/filmStrip/hiking.jpg';
-
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const filmStripImages = [
     {
@@ -74,16 +75,42 @@ const filmStripImages = [
 ]
 
 export function FilmStripRow(){
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  function numSlidesToShow(width:number){
+    if(width > 1400){
+      return 4;
+    } else if(width > 1000){
+      return 3;
+    } else{
+      return 2;
+    }
+  }
+
   const settings = {
     focusOnSelect: true,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: numSlidesToShow(windowWidth),
     slidesToScroll: 1,
     swipeToSlide: true,
     variableWidth: true,
     slide: 'figure',
     arrows: true,
   };
+  console.log(settings.slidesToShow);
 
   return (
     <div className="filmStripNew filmStripRow">
