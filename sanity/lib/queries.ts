@@ -33,12 +33,13 @@ export const projectQuery = groq`*[_type == "project" && slug.current == $slug][
     roleDescription, 
     projectDescription,
     moreInfoLink,
-    embedType,
-    videoFile,
-    youtubeLink,
-    otherVideoLink,
-    videoThumbnail,
-    videoThumbnailAlt
+    mediaSource,
+    videoFile {
+      asset->{
+        url
+      }
+    },
+    videoLink
   }`;
 
 // get all project slugs

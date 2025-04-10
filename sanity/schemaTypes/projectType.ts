@@ -91,50 +91,36 @@ export const projectType = defineType({
       description: 'Optional field - if empty, no link button will show'
     }),
     defineField({
-      name: "embedType",
+      name: "mediaSource",
       type: "string",
       options: {
         list: [
-          { title: "Video File", value: "1" },
-          { title: "YouTube Link", value: "2" },
-          { title: "Other Video Link", value: "3" }
+          { title: "Video File", value: "videofile" },
+          { title: "YouTube", value: "youtube" },
+          { title: "Facebook", value: "facebook" },
+          { title: "Streamable", value: "streamable" },
+          { title: "Vimeo", value: "vimeo" },
+          { title: "Mux", value: "mux" },
+          { title: "Wistia", value: "wistia" },
+          { title: "Twitch", value: "twitch" },
+          { title: "DailyMotion", value: "dailymotion" },
+          { title: "Vidyard", value: "vidyard" },
+          { title: "Kaltura", value: "kaltura" },
         ],
         layout: "radio",
-        direction: "horizontal"
+        direction: "vertical"
       }
     }),
     defineField({
       name: 'videoFile',
       type: 'file',
-      hidden: ({document}) => !(document?.embedType === "1"),
+      hidden: ({document}) => !(document?.mediaSource === "videofile"),
     }),
     defineField({
-      name: 'youtubeLink',
+      name: 'videoLink',
       type: 'url',
-      hidden: ({document}) => !(document?.embedType === "2"),
+      hidden: ({document}) => !(document?.mediaSource != "videofile"),
     }),
-    defineField({
-      name: 'otherVideoLink',
-      type: 'url',
-      hidden: ({document}) => !(document?.embedType === "3"),
-    }),
-    defineField({
-      name: 'videoThumbnail',
-      type: 'image',
-      hidden: ({document}) => !(document?.embedType === "3"),
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        defineField({
-          name: 'videoThumbnailAlt',
-          type: 'string',
-          title: 'Alternative text',
-        })
-      ]
-    }),
-    // add embed field. Embed type (YouTube video, video file, other hosted video?)
-    // thumbnail image, thumbnail alt (optional)
   ],
   preview: {
     select: {
