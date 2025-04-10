@@ -84,7 +84,7 @@ function Projects({ projects }: { projects: SanityDocument[] }) {
         Projects
       </h2>
       {/* Sorting & Search Bar Container */}
-      <div className="w-11/12 flex justify-end items-center gap-2.5 mb-10">
+      <div className="md:w-11/12 w-full flex md:flex-row flex-col justify-end md:items-center items-end gap-2.5 mb-10">
         <div>
           {/* Search Bar */}
           <input
@@ -99,7 +99,7 @@ function Projects({ projects }: { projects: SanityDocument[] }) {
           {/* Search Button */}
           <button
             onClick={handleSearch}
-            className="p-2.5 ml-0.5 mr-2.5 text-base bg-text text-background border-1 border-text rounded-md cursor-pointer hover:text-text hover:bg-background"
+            className="p-2 ml-0.5 md:mr-2.5 text-base bg-text text-background border-1 border-text rounded-md cursor-pointer hover:text-text hover:bg-background"
           >
             Search
           </button>
