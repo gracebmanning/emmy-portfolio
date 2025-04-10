@@ -1,0 +1,13 @@
+.reactPlayerContainer {
+    position: relative;
+    width: 100%; /* Take up the full width of the parent */
+    padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+}
+  
+.reactPlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
