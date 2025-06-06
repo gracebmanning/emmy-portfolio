@@ -60,6 +60,9 @@
     box-sizing: border-box;
   }
 
+.filmStripRow{
+    background-color: #fdfdf8;
+}
 
 /* Code from CSS Shapes: https://css-shape.com/film-strip/ */
 .filmStrip {
@@ -115,6 +118,7 @@
     margin-left: 10px;
     margin-right: 10px;
     display: table;
+    background-color: #fdfdf8;
 }
 
 .filmStripCaption{

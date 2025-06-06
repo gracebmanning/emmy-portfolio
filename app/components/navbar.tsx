@@ -24,8 +24,8 @@ export default function Navbar(){
         setExpanded(!expanded);
     }
     return(
-        <nav className="w-screen flex flex-row justify-between items-center pl-[20px] pr-[20px] md:m-0 mr-[5px] ml-[5px] border-b-1 border-text">
-            <Link className='text-text' href='/'>
+        <nav className="w-screen flex flex-row justify-between items-center pl-[20px] pr-[20px] md:m-0 mr-[5px] ml-[5px] border-b-1 border-text dark:border-white text-text dark:text-white">
+            <Link className='text-text dark:text-white' href='/'>
                 <h1>Emmy Gardner</h1>
             </Link>
             <ul className={expanded ? 'navListExpanded' : 'navList'}>

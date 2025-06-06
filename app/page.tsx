@@ -7,7 +7,7 @@ function Home() {
     <div className='w-full m-0'>
         <div className='w-screen flex md:flex-row flex-col justify-center items-center md:m-5 m-0'>
             <img className='bg-gray-500 md:w-[250px] w-[150px] m-5' src="/images/headshot.jpg" alt='Emmy holding a slate at a production' />
-            <div className='md:m-5 m-0 md:w-[40%] w-[80%] md:text-left text-justify leading-[1.5]'>
+            <div className='md:m-5 m-0 md:w-[40%] w-[80%] md:text-left text-justify leading-[1.5] text-text dark:text-white'>
                 <p>
                     hi, I'm <b>Emmy</b>!
                 </p>
@@ -28,8 +28,10 @@ function Home() {
                 </p>
             </div>
         </div>
-        <FilmStripRow/>
-        <FilmStripColumn/>
+        <div>
+            <FilmStripRow/>
+            <FilmStripColumn/>
+        </div>
     </div>
 )
 }

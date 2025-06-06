@@ -6,10 +6,10 @@ import { urlFor } from "@/sanity/lib/image";
 
 const ProjectCard = ({ project }: {project: SanityDocument}) => {
   return(
-    <Link className="max-w-sm rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between text-left duration-200 ease-in-out hover:scale-102" href={`/projects/${project.slug}`}>
+    <Link className="max-w-sm rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between text-left duration-200 ease-in-out hover:scale-102 dark:bg-white" href={`/projects/${project.slug}`}>
       <img className="w-full" src={urlFor(project.thumbnail).width(450).url()} alt="Sunset in the mountains" />
       <div className="px-6 py-4">
-        <h2 className="text-xl">{project.title}</h2>
+        <h2 className="text-xl text-text">{project.title}</h2>
         <div className="mt-4">
           <h3 className="text-lg text-accent m-0">{project.company}</h3>
           <p className="text-gray-700 text-base m-0">{`${project.month} ${project.year}`}</p>
@@ -79,7 +79,7 @@ function Projects({ projects }: { projects: SanityDocument[] }) {
   };
   
   return (
-    <div className="m-5 flex flex-col items-center">
+    <div className="m-5 flex flex-col items-center text-text dark:text-white">
       <h2 className="text-center text-3xl mb-5">
         Projects
       </h2>
@@ -99,7 +99,7 @@ function Projects({ projects }: { projects: SanityDocument[] }) {
           {/* Search Button */}
           <button
             onClick={handleSearch}
-            className="p-2 ml-0.5 md:mr-2.5 text-base bg-text text-background border-1 border-text rounded-md cursor-pointer hover:text-text hover:bg-background"
+            className="p-2 ml-0.5 md:mr-2.5 text-base bg-text text-background border-1 border-text rounded-md cursor-pointer hover:text-text hover:bg-background dark:text-white dark:bg-text dark:border-white dark:hover:text-text dark:hover:bg-white"
           >
             Search
           </button>
@@ -111,8 +111,8 @@ function Projects({ projects }: { projects: SanityDocument[] }) {
           value={sortOrder}
           className="p-2 text-base border border-gray-300 rounded-md"
         >
-          <option value="newest">Newest First</option>
-          <option value="oldest">Oldest First</option>
+          <option value="newest" className="text-text">Newest First</option>
+          <option value="oldest" className="text-text">Oldest First</option>
         </select>
       </div>
 
