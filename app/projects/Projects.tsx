@@ -40,25 +40,26 @@ function Projects({ projects }: { projects: SanityDocument[] }) {
   const projectsArray = Object.values(projects);
 
   // Sort projects based on selected order
-  const sortedProjects = projectsArray.sort((a, b) => {
+  const sortedProjects = [...projectsArray].sort((a, b) => { // Create a shallow copy
     const sortDirection = sortOrder === "newest" ? -1 : 1; // -1 for newest first, 1 for oldest first
-  
+
     // First compare years
     if (a.year !== b.year) {
-      return sortDirection * (b.year - a.year); // Sort by year (newest or oldest)
+      return sortDirection * (a.year - b.year); // Corrected: (a.year - b.year)
     }
-  
+
     // If years are the same, compare months
     if (a.month && b.month) {
       const monthOrder = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  
+
       const aMonthIndex = monthOrder.indexOf(a.month);
       const bMonthIndex = monthOrder.indexOf(b.month);
-  
-      return sortDirection * (aMonthIndex - bMonthIndex); // Sort by month (newest or oldest)
+
+      // Apply sortDirection to month comparison
+      return sortDirection * (aMonthIndex - bMonthIndex);
     }
-  
-    return 0; // If years and/or months are the same, maintain original order
+
+      return 0; // If years and/or months are the same, maintain original order
   });
 
   // Filter projects based on the search query
