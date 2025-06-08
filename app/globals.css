@@ -78,6 +78,15 @@
   }
 }
 
+.bio {
+  a {
+    color: var(--color-accent);
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 1em;

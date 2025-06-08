@@ -1,31 +1,16 @@
-import Image from "next/image";
+import { client } from "../sanity/lib/client";
+import { type SanityDocument, PortableText } from "next-sanity";
 import { BasicPageLayout } from "./components/basicPageLayout";
 import { FilmStripRow, FilmStripColumn } from "./components/filmStrip";
+import { siteSettingsQuery } from "@/sanity/lib/queries";
 
-function Home() {
+function Home({ siteSettings }: { siteSettings: SanityDocument }) {
   return(
     <div className='w-full m-0'>
         <div className='w-screen flex md:flex-row flex-col justify-center items-center md:m-5 m-0'>
             <img className='bg-gray-500 md:w-[250px] w-[150px] m-5' src="/images/headshot.jpg" alt='Emmy holding a slate at a production' />
-            <div className='md:m-5 m-0 md:w-[40%] w-[80%] md:text-left text-justify leading-[1.5] text-text dark:text-white'>
-                <p>
-                    hi, I'm <b>Emmy</b>!
-                </p>
-                <p>
-                    welcome to my website. 
-                    i am aspiring in the field of <b>digital and traditional media production</b> with a particular interest in <b>screenwriting</b> and <b>producing</b>. 
-                    i have spent the past year working as a production assistant and operating cameras under several different production companies. 
-                    if you click on the <a className="text-accent hover:underline" id='projectsLink' href='/projects'>projects</a> tab of this website, you'll find examples of some projects i've worked on. 
-                </p>
-                <p>
-                    outside of my work, i am also an avid media consumer myself. i love to spend time with my cat, hit up the local vintage, thrift, and oddities shops, and go hiking around LA. i have worked at several zoos and am passionate about animal care and environmental conservation. i will do just about anything for a can of diet coke. 
-                </p>
-                <p>
-                    thanks for visiting my website!
-                </p>
-                <p>
-                    you can contact me with any inquiries at emmythegardner [@] gmail.com
-                </p>
+            <div className='bio prose md:m-5 m-0 md:w-[40%] w-[80%] md:text-left text-justify leading-[1.5] text-text dark:text-white'>
+                {Array.isArray(siteSettings.bio) && <PortableText value={siteSettings.bio} />}
             </div>
         </div>
         <div>
@@ -36,10 +21,12 @@ function Home() {
 )
 }
 
-export default function Page(){
-  return(
-    <BasicPageLayout>
-      <Home/>
-    </BasicPageLayout>
-  )
+const options = { next: { revalidate: 30 } };
+export default async function Page(){
+    const siteSettings = await client.fetch<SanityDocument>(siteSettingsQuery, {}, options);
+    return(
+        <BasicPageLayout>
+            <Home siteSettings={siteSettings} />
+        </BasicPageLayout>
+    )
 }

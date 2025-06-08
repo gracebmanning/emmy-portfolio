@@ -1,5 +1,16 @@
 import { groq } from "next-sanity";
 
+// get all slugs with latest updated date for sitemap
+export const siteSettingsQuery = groq`*[_type == "siteSettings"][0]{
+    bio,
+    resume {
+      asset->{
+        url
+      }
+    }
+  }`;
+
+
 // title, slug, thumbnail, thumbnailAlt, month, year, 
 // company, companyLink (make <a> if link is not empty),
 // role, roleDescription, projectDescription,
