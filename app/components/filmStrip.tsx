@@ -112,7 +112,6 @@ export function FilmStripRow(){
     slide: 'figure',
     arrows: true,
   };
-  console.log(settings.slidesToShow);
 
   return (
     <div className="filmStripNew filmStripRow">
