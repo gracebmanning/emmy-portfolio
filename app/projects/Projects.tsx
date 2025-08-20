@@ -7,7 +7,7 @@ import { urlFor } from "@/sanity/lib/image";
 const ProjectCard = ({ project }: {project: SanityDocument}) => {
   return(
     <Link className="max-w-sm rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between text-left duration-200 ease-in-out hover:scale-102 dark:bg-white" href={`/projects/${project.slug}`}>
-      <img className="w-full" src={urlFor(project.thumbnail).width(450).url()} alt="Sunset in the mountains" />
+      <img className="w-full" src={urlFor(project.thumbnail).width(450).url()} alt={project.thumbnail.thumbnailAlt} />
       <div className="px-6 py-4">
         <h2 className="text-xl text-text">{project.title}</h2>
         <div className="mt-4">
