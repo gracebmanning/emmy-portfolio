@@ -1,8 +1,17 @@
 import { groq } from "next-sanity";
 
-// get all slugs with latest updated date for sitemap
-export const siteSettingsQuery = groq`*[_type == "siteSettings"][0]{
+export const homeContentQuery = groq`*[_type == "siteSettings"][0]{
     bio,
+    headshot {
+      alt,
+      asset->{
+        url
+      }
+    },
+    filmStripImages
+  }`;
+
+export const resumeQuery = groq`*[_type == "siteSettings"][0]{
     resume {
       asset->{
         url
@@ -22,7 +31,6 @@ export const allProjectsQuery = groq`*[_type == "project"] {
     title,
     "slug": slug.current,
     thumbnail,
-    thumbnailAlt,
     month,
     year,
     company,
@@ -35,7 +43,6 @@ export const projectQuery = groq`*[_type == "project" && slug.current == $slug][
     title,
     "slug": slug.current,
     thumbnail,
-    thumbnailAlt,
     month,
     year,
     company,
