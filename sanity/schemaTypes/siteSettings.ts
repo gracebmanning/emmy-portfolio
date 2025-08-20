@@ -1,66 +1,107 @@
-import { defineArrayMember } from 'sanity';
+import { defineArrayMember, defineField } from 'sanity';
 
 export default {
   name: 'siteSettings',
   title: 'Site Settings',
   type: 'document',
   fields: [
-    {
-        name: 'bio',
-        title: 'Bio',
-        type: 'array',
-        of: [
-          defineArrayMember({
-            type: 'block',
-            // Styles let you define what blocks can be marked up as. The default
-            // set corresponds with HTML tags, but you can set any title or value
-            // you want, and decide how you want to deal with it where you want to
-            // use your content.
-            styles: [
-              {title: 'Normal', value: 'normal'},
-              {title: 'H1', value: 'h1'},
-              {title: 'H2', value: 'h2'},
-              {title: 'H3', value: 'h3'},
-              {title: 'H4', value: 'h4'},
-              {title: 'Quote', value: 'blockquote'},
+    defineField({
+      name: 'bio',
+      title: 'Bio',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          type: 'block',
+          // Styles let you define what blocks can be marked up as. The default
+          // set corresponds with HTML tags, but you can set any title or value
+          // you want, and decide how you want to deal with it where you want to
+          // use your content.
+          styles: [
+            {title: 'Normal', value: 'normal'},
+            {title: 'H1', value: 'h1'},
+            {title: 'H2', value: 'h2'},
+            {title: 'H3', value: 'h3'},
+            {title: 'H4', value: 'h4'},
+            {title: 'Quote', value: 'blockquote'},
+          ],
+          lists: [{title: 'Bullet', value: 'bullet'}],
+          // Marks let you mark up inline text in the Portable Text Editor
+          marks: {
+            // Decorators usually describe a single property – e.g. a typographic
+            // preference or highlighting
+            decorators: [
+              {title: 'Strong', value: 'strong'},
+              {title: 'Emphasis', value: 'em'},
             ],
-            lists: [{title: 'Bullet', value: 'bullet'}],
-            // Marks let you mark up inline text in the Portable Text Editor
-            marks: {
-              // Decorators usually describe a single property – e.g. a typographic
-              // preference or highlighting
-              decorators: [
-                {title: 'Strong', value: 'strong'},
-                {title: 'Emphasis', value: 'em'},
-              ],
-              // Annotations can be any object structure – e.g. a link or a footnote.
-              annotations: [
-                {
-                  title: 'URL',
-                  name: 'link',
-                  type: 'object',
-                  fields: [
-                    {
-                      title: 'URL',
-                      name: 'href',
-                      type: 'url',
-                    },
-                  ],
-                },
-              ],
-            },
-          }),
-        ],
-    },
-    {
-        name: 'resume',
-        title: 'Resumé',
-        type: 'file',
-        description: 'PDF only',
-        options: {
-            accept: 'application/pdf'
+            // Annotations can be any object structure – e.g. a link or a footnote.
+            annotations: [
+              {
+                title: 'URL',
+                name: 'link',
+                type: 'object',
+                fields: [
+                  defineField({
+                    title: 'URL',
+                    name: 'href',
+                    type: 'url',
+                  }),
+                ],
+              },
+            ],
+          },
+        }),
+      ],
+    }),
+    defineField({
+      name: 'resume',
+      title: 'Resumé',
+      type: 'file',
+      description: 'PDF only',
+      options: {
+          accept: 'application/pdf'
+      }
+    }),
+    defineField({
+      name: 'headshot',
+      title: 'Headshot',
+      type: 'image',
+      options: {
+        hotspot: false,
+      },
+      fields: [
+        defineField({
+          name: 'alt',
+          title: 'Alternative text',
+          type: 'string',
+        })
+      ]
+    }),
+    defineField({
+      name: 'filmStripImages',
+      title: 'Film Strip Images',
+      type: 'array',
+      of: [
+        {
+          name: 'filmStripImage',
+          title: 'Film Strip Image',
+          type: 'image',
+          options: {
+            hotspot: false,
+          },
+          fields: [
+            defineField({
+              name: 'caption',
+              title: 'Caption',
+              type: 'string',
+            }),
+            defineField({
+              name: 'alt',
+              title: 'Alternative text',
+              type: 'string',
+            },)
+          ],
         }
-
-    }
+      ]
+    })
   ]
 }
