@@ -8,7 +8,13 @@ export const homeContentQuery = groq`*[_type == "siteSettings"][0]{
         url
       }
     },
-    filmStripImages
+    filmStripImages[]{
+      caption,
+      alt,
+      asset->{
+        url
+      }
+    }
   }`;
 
 export const resumeQuery = groq`*[_type == "siteSettings"][0]{

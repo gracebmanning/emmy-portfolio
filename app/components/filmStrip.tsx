@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState, useEffect } from 'react';
+import { Image } from 'sanity';
 
 import fantasticFourCarpet from '../../public/images/filmStrip/fantastic-four-carpet.jpg';
 import godMic from '../../public/images/filmStrip/god-mic.jpg';
@@ -79,7 +80,20 @@ const filmStripImages = [
     },
 ]
 
-export function FilmStripRow(){
+interface SanityFilmStripImage{
+  _key: string;
+  caption: string;
+  alt: string;
+  asset:{
+    url:string;
+  };
+}
+
+interface FilmStripProps{
+  images: SanityFilmStripImage[];
+}
+
+export function FilmStripRow({ images }: FilmStripProps){
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -121,9 +135,9 @@ export function FilmStripRow(){
   return (
     <div className="filmStripNew filmStripRow">
       <Slider {...settings}>
-      {filmStripImages.map((image, index) => (
-        <figure key={index} className="film-strip-slide">
-          <img src={image.image.src} alt={image.alt} className="film-strip-image" />
+      {images.map((image) => (
+        <figure key={image._key} className="film-strip-slide">
+          <img src={image.asset.url} alt={image.alt} className="film-strip-image" />
           <figcaption className="film-strip-caption">{image.caption}</figcaption>
         </figure>
       ))}
@@ -132,18 +146,16 @@ export function FilmStripRow(){
   );
 }
 
-export function FilmStripColumn(){
+export function FilmStripColumn({ images }: FilmStripProps){
     return( 
         <div className='filmStripColumn'>
             <div className='scroll'>
-                {filmStripImages.map((item, index) => {
-                    return(
-                    <div className='filmStrip filmStripItem' key={index}>
-                        <img src={item.image.src} alt={item.alt} />
-                        <p className={`filmStripCaption ${item.align}`}>{item.caption}</p>
+                {images.map((image, index) => (
+                    <div key={index} className='filmStrip filmStripItem'>
+                        <img src={image.asset.url} alt={image.alt} />
+                        <p className={`filmStripCaption center`}>{image.caption}</p>
                     </div>
-                    )
-                })}
+                  ))}
             </div>
         </div>
     )
